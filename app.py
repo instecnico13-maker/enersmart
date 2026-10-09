@@ -195,7 +195,7 @@ def ayuda_horas():
 def bloque_equipo(clave, nombre, ayuda):
     st.subheader(nombre)
     if st.checkbox("No tengo o no uso este equipo", key=f"w_no_{clave}"):
-        st.caption("Este equipo no suma a tu cuenta de energía..")
+        st.caption("Este equipo no suma a tu cuenta de energía.")
         return 0, 0.0
     c1, c2 = st.columns(2)
     pot = c1.number_input("Potencia (vatios)", min_value=0, max_value=20000, step=10, key=f"w_pot_{clave}", help=ayuda)
